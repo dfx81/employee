@@ -10,7 +10,7 @@ let data = {
     shelf: 1,
     category: "Exhausts",
     description: "A new exhaust from Turbo GX brand",
-    image: "images/box.png"
+    image: "images/Exhausts.png"
   },
   1: {
     itemId: "NTGLRWS001",
@@ -19,7 +19,7 @@ let data = {
     shelf: 1,
     category: "Mirrors",
     description: "A new windshield that protects you from glares",
-    image: "images/box.png"
+    image: "images/Mirrors.png"
   },
   2: {
     itemId: "NTGLRWS001",
@@ -28,7 +28,7 @@ let data = {
     shelf: 2,
     category: "Mirrors",
     description: "A new windshield that protects you from glares",
-    image: "images/box.png"
+    image: "images/Mirrors.png"
   },
   3: {
     itemId: "TGX3002",
@@ -37,7 +37,7 @@ let data = {
     shelf: 1,
     category: "Exhausts",
     description: "A cheaper exhaust from Turbo GX brand",
-    image: "images/box.png"
+    image: "images/Exhausts.png"
   },
   4: {
     itemId: "RBR-001",
@@ -46,7 +46,7 @@ let data = {
     shelf: 1,
     category: "Tires",
     description: "A cheap set of tires from Road Rubber brand",
-    image: "images/box.png"
+    image: "images/Tires.png"
   },
   5: {
     itemId: "TLCK-V3",
@@ -55,7 +55,7 @@ let data = {
     shelf: 2,
     category: "Brakes",
     description: "A quality brake from Tirelock brand",
-    image: "images/box.png"
+    image: "images/Brakes.png"
   },
   6: {
     itemId: "CC-01",
@@ -64,7 +64,7 @@ let data = {
     shelf: 1,
     category: "Leathers",
     description: "A high quality seat replacement",
-    image: "images/box.png"
+    image: "images/Leathers.png"
   },
   7: {
     itemId: "P4MZX32",
@@ -73,7 +73,7 @@ let data = {
     shelf: 1,
     category: "Engines",
     description: "A new engine from PER4MA",
-    image: "images/box.png"
+    image: "images/Engines.png"
   },
   8: {
     itemId: "LHL-2:LIME",
@@ -82,7 +82,7 @@ let data = {
     shelf: 2,
     category: "Lamps",
     description: "A lime coloured headlights",
-    image: "images/box.png"
+    image: "images/Lamps.png"
   },
   9: {
     itemId: "AR-S-69",
@@ -91,7 +91,7 @@ let data = {
     shelf: 2,
     category: "Rims",
     description: "A two years old rim set from Autosports Design",
-    image: "images/box.png"
+    image: "images/Rims.png"
   },
   10: {
     itemId: "AR-L-69",
@@ -100,9 +100,13 @@ let data = {
     shelf: 2,
     category: "Rims",
     description: "A two years old rim set from Autosports Design",
-    image: "images/box.png"
+    image: "images/Rims.png"
   }
 };
+
+if (window.localStorage.passTut) {
+  closeTut();
+}
 
 refreshList();
 
@@ -424,4 +428,9 @@ function cancel(key) {
   
   showCart();
   refreshList();
+}
+
+function closeTut() {
+  document.getElementById("guide").style.display = "none";
+  window.localStorage.passTut = "true";
 }
